@@ -46,7 +46,6 @@ function createCardComponent(card) {
 	headerEl.appendChild(ellipsis);
 	previewEl.appendChild(hrsEl);
 	previewEl.appendChild(compareHrsEl);
-
 	return colEl;
 }
 
