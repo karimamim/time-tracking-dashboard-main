@@ -1,61 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
-  <title>Frontend Mentor | Time tracking dashboard</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="featured">
-      <div class="info">
-        <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
-        <div class="text">
-          <p>Report for</p>
-          <div class="desk-name">
-            <h1>Jeremy<br />Robson</h1>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="featured">
+        <div class="info">
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+          <div class="text">
+            <p>Report for</p>
+            <div class="desk-name">
+              <h1>Jeremy<br />Robson</h1>
+            </div>
+            <div class="mb-name">
+              <h1>Jeremy Robson</h1>
+            </div>
           </div>
-          <div class="mb-name">
-            <h1>Jeremy Robson</h1>
+        </div>
+        <div class="preview-time">
+          <div class="daily">
+            <button>Daily</button>
+          </div>
+          <div class="weekly">
+            <button>Weekly</button>
+          </div>
+          <div class="monthly">
+            <button>Monthly</button>
           </div>
         </div>
       </div>
-      <div class="preview-time">
-        <div class="daily">
-          <button class="time-btn" data-time="daily">Daily</button>
+      <div class="activity-wrapper">
+        <div class="row card-1">
+          <div class="col-4 work">
+            <div class="preview">
+              <div class="header">
+                <p>Work</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>32hrs</h2>
+              <p class="hours">Last week-36hrs</p>
+            </div>
+          </div>
+          <div class="col-4 play">
+            <div class="preview">
+              <div class="header">
+                <p>Play</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>10hrs</h2>
+              <p class="hours">Last week-8hrs</p>
+            </div>
+          </div>
+          <div class="col-4 study">
+            <div class="preview">
+              <div class="header">
+                <p>Study</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>4hrs</h2>
+              <p class="hours">Last week-7hrs</p>
+            </div>
+          </div>
         </div>
-        <div class="weekly">
-          <button class="time-btn" data-time="weekly">Weekly</button>
-        </div>
-        <div class="monthly">
-          <button class="time-btn" data-time="monthly">Monthly</button>
+        <div class="row card-2">
+          <div class="col-4 exercise">
+            <div class="preview">
+              <div class="header">
+                <p>Exercise</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>4hrs</h2>
+              <p class="hours">Last week-5hrs</p>
+            </div>
+          </div>
+          <div class="col-4 social">
+            <div class="preview">
+              <div class="header">
+                <p>Social</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>5hrs</h2>
+              <p class="hours">Last week-10hrs</p>
+            </div>
+          </div>
+          <div class="col-4 self-care">
+            <div class="preview">
+              <div class="header">
+                <p>Self Care</p>
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+              <h2>2hrs</h2>
+              <p class="hours">Last week-2hrs</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="activity-wrapper">
-      <div class="row">
-      </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Karima Khatun Mim</a>.
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-      href="#">Karima Khatun Mim</a>.
-  </div>
 
-  <script src="./src/data.js"></script>
-  <script src="./src/main.js"></script>
-</body>
-
+    <script src="./src/data.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
 </html>
