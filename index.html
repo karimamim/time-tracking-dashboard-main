@@ -1,62 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
 
-  <title>Frontend Mentor | Time tracking dashboard</title>
-</head>
+  <!-- Changes by Mehedi Hasan -->
 
-<!-- Changes by Mehedi Hasan -->
-
-<body>
-  <div class="container">
-    <div class="featured">
-      <div class="info">
-        <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
-        <div class="text">
-          <p>Report for</p>
-          <div class="desk-name">
-            <h1>Jeremy<br />Robson</h1>
+  <body>
+    <div class="container">
+      <div class="featured">
+        <div class="info">
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson" />
+          <div class="text">
+            <p>Report for</p>
+            <div class="desk-name">
+              <h1>Jeremy<br />Robson</h1>
+            </div>
+            <div class="mb-name">
+              <h1>Jeremy Robson</h1>
+            </div>
           </div>
-          <div class="mb-name">
-            <h1>Jeremy Robson</h1>
+        </div>
+        <div class="preview-time">
+          <div class="daily">
+            <button class="time-btn" data-time="daily">Daily</button>
+          </div>
+          <div class="weekly">
+            <button class="time-btn" data-time="weekly">Weekly</button>
+          </div>
+          <div class="monthly">
+            <button class="time-btn" data-time="monthly">Monthly</button>
           </div>
         </div>
       </div>
-      <div class="preview-time">
-        <div class="daily">
-          <button class="time-btn" data-time="daily">Daily</button>
-        </div>
-        <div class="weekly">
-          <button class="time-btn" data-time="weekly">Weekly</button>
-        </div>
-        <div class="monthly">
-          <button class="time-btn" data-time="monthly">Monthly</button>
-        </div>
+      <div class="activity-wrapper">
+        <div class="row"></div>
       </div>
     </div>
-    <div class="activity-wrapper">
-      <div class="row">
-      </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Karima Khatun Mim</a>.
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-      href="#">Karima Khatun Mim</a>.
-  </div>
-  <script src="./src/data.js"></script>
-  <script src="./src/main.js"></script>
-</body>
-
+    <script src="./src/data.js"></script>
+    <!-- <script src="./src/mehedi.js"></script> -->
+    <script src="./src/main.js"></script>
+  </body>
 </html>

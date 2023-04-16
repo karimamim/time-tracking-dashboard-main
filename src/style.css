@@ -104,32 +104,38 @@ body {
   background-image: url(../images/icon-work.svg);
   background-color: var(--Light-red-work);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .activity-wrapper .row .play {
   background-image: url(../images/icon-play.svg);
   background-color: var(--Soft-blue-play);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 .activity-wrapper .row .study {
   background-image: url(../images/icon-study.svg);
   background-color: var(--Light-red-study);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 .activity-wrapper .row .exercise {
   background-image: url(../images/icon-exercise.svg);
   background-color: var(--Lime-green-exercise);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 .activity-wrapper .row .social {
   background-image: url(../images/icon-social.svg);
   background-color: var(--Violet-social);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 .activity-wrapper .row .self-care {
   background-image: url(../images/icon-self-care.svg);
   background-color: var(--Soft-orange-self-care);
   background-repeat: no-repeat;
+  background-position: top right;
 }
 
 /* ===========Styling Previews Background Ends Here==== */
@@ -221,4 +227,9 @@ body {
   }
 }
 
-/* added by mehedi hasan */
+/* ==========Style With javaScript========== */
+
+.container .featured .preview-time .bold {
+  font-weight: bold;
+  color: #fff;
+}

@@ -1,64 +1,80 @@
-// I have data from data.js
+// I have all data from data.js
 let time = "weekly";
 
-const cardRow = document.querySelector(".row");
+const row = document.querySelector(".row");
 
-function renderCards() {
-	cardRow.innerHTML = "";
+function displayCards() {
+  row.innerHTML = "";
 
-	data.map(function (card) {
-		const cardComponent = createCardComponent(card);
-		cardRow.appendChild(cardComponent);
-	});
+  data.map(function (card) {
+    const createdCard = creatingCards(card);
+    row.appendChild(createdCard);
+  });
 }
 
-function createCardComponent(card) {
-	const { current, previous } = card.timeframes[time];
+function creatingCards(cardDetails) {
+  const { current, previous } = cardDetails.timeframes[time];
 
-	const colEl = document.createElement("div");
-	colEl.className = `col-4 ${card.title.toLowerCase().replace(" ", "-")}`;
+  const col4El = document.createElement("div");
+  col4El.className = `col-4 ${cardDetails.title
+    .toLowerCase()
+    .replace(" ", "-")}`;
 
-	const previewEl = document.createElement("div");
-	previewEl.className = "preview";
+  const previewElement = document.createElement("div");
+  previewElement.className = "preview";
 
-	const headerEl = document.createElement("div");
-	headerEl.className = "header";
+  const headerElement = document.createElement("div");
+  headerElement.className = "header";
 
-	const title = document.createElement("p");
-	title.innerText = card.title;
+  const p = document.createElement("p");
+  p.innerText = cardDetails.title;
 
-	const ellipsis = document.createElement("img");
-	ellipsis.setAttribute("src", "../images/icon-ellipsis.svg");
+  const image = document.createElement("img");
+  image.setAttribute("src", "../images/icon-ellipsis.svg");
 
-	const hrsEl = document.createElement("h2");
-	hrsEl.innerText = `${current}hrs`;
+  const h2Element = document.createElement("h2");
+  h2Element.innerText = `${current}hrs`;
 
-	const compareHrsEl = document.createElement("p");
-	compareHrsEl.className = "hours";
-	if (time === "daily") compareHrsEl.innerText = `Last  day-${previous}hrs`;
-	if (time === "weekly") compareHrsEl.innerText = `Last  week-${previous}hrs`;
-	if (time === "monthly") compareHrsEl.innerText = `Last  month-${previous}hrs`;
+  const compareHrs = document.createElement("p");
+  compareHrs.className = "hours";
 
-	// append child elements to order
-	colEl.appendChild(previewEl);
-	previewEl.appendChild(headerEl);
-	headerEl.appendChild(title);
-	headerEl.appendChild(ellipsis);
-	previewEl.appendChild(hrsEl);
-	previewEl.appendChild(compareHrsEl);
-	return colEl;
+  if (time === "daily") {
+    compareHrs.innerText = `Last Day-${previous}hrs`;
+  }
+
+  if (time === "weekly") {
+    compareHrs.innerText = `last Week-${previous}hrs`;
+  }
+
+  if (time === "monthly") {
+    compareHrs.innerText = `Last Month-${previous}hrs`;
+  }
+
+  col4El.appendChild(previewElement);
+  previewElement.appendChild(headerElement);
+  headerElement.appendChild(p);
+  headerElement.appendChild(image);
+  previewElement.appendChild(h2Element);
+  previewElement.appendChild(compareHrs);
+
+  return col4El;
 }
 
-// Initially render cards
-renderCards();
+displayCards();
 
-// Add event handlers to buttons
-const timeBtns = document.querySelectorAll(".time-btn");
+const timeButtons = document.querySelectorAll(".time-btn");
 
-timeBtns.forEach(function (timeBtn) {
-	timeBtn.addEventListener("click", function (event) {
-		time = event.target.dataset.time;
-		renderCards();
-	});
+function clearBtns() {
+  timeButtons.forEach((btn) => {
+    btn.classList.remove("bold");
+  });
+}
+
+timeButtons.forEach(function (btn) {
+  btn.addEventListener("click", (event) => {
+    clearBtns();
+    btn.classList.add("bold");
+    time = event.target.dataset.time;
+    displayCards();
+  });
 });
-
